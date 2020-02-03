@@ -72,6 +72,9 @@
   }
 
   @screen lg {
+    .menu-container {
+      @apply w-1/4 absolute mt-16 right-0;
+    }
     .colordiv-container {
       @apply flex flex-row flex-wrap justify-start;
     }

@@ -1,5 +1,6 @@
 <script>
-let isOpen = false;
+    import { fade, fly } from 'svelte/transition';
+    let isOpen = false;
 </script>
 
 <div class="header fixed z-10 h-16 top-0 w-full bg-gray-900">
@@ -21,7 +22,7 @@ let isOpen = false;
         {/if}
     </div>
     {#if isOpen}
-    <div class="menu-container">
+    <div transition:fade="{{ duration: 200 }}" class="menu-container">
         <ul class="menu-list mt-20" on:click={ () => isOpen = false }>
             <li><a href="#/">Home</a></li>
             <li><a href="#/about">About</a></li>
